@@ -1,0 +1,12 @@
+<h1>Games</h1>
+ <ul>
+   <li *ngFor="let game of games">
+     <a [routerLink]="['/games', game._id]">{{game.name}}</a>
+     <br>
+     <small>{{game.cost}}/{{game.rating}</small>
+   </li>
+ </ul>
+
+ <div $*ngIf="games && games.length ===0">
+   No Games Yet
+ </div>
